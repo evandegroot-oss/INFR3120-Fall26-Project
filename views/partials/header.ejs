@@ -1,0 +1,33 @@
+<!-- Creates the Bootstrap navigation bar with a dark background. -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+        <!-- Website brand name that links back to the Home page. -->
+        <a class="navbar-brand" href="/">Task Manager</a>
+
+        <!-- Creates the collapsible navigation button for smaller screens. -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Contains the navigation links and allows them to collapse on smaller screens. -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <!-- Home navigation link. -->
+                <li class="nav-item">
+                    <% if (title == 'Home') { %>
+                        <a class="nav-link active" href="/">Home</a>
+                    <% } else { %>
+                        <a class="nav-link" href="/">Home</a>
+                    <% } %>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

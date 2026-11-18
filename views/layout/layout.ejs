@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/content/app.css">
+    
+</head>
+<body>
+
+    <!-- Website header -->
+    <%- include('../partials/header') %>
+
+    <!-- Main page content -->
+    <%- body %>
+
+    <!-- Website footer -->
+    <%- include('../partials/footer') %>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
