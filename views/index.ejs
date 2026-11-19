@@ -4,20 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/content/app.css">
 </head>
+
 <body>
+
     <%- include('partials/header') %>
 
     <main class="container mt-4">
+
         <h1>Task Manager</h1>
         <p>Welcome to your task management website!</p>
+
+        <hr>
+
+        <h2>Create a New Task</h2>
+
+        <form action="/tasks/create" method="POST">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Task Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="dueDate" class="form-label">Due Date</label>
+                <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="priority" class="form-label">Priority</label>
+                <select class="form-select" id="priority" name="priority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Task</button>
+
+        </form>
+
     </main>
 
     <%- include('partials/footer') %>
 
     <script src="/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
